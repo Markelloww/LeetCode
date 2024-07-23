@@ -5,10 +5,9 @@
 
 public class Solution {
     public boolean isPalindrome(int x) {
-        if (x == 0)
-            return true;
-        if (x < 0 || x % 10 == 0)
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
+        }
         int palindome = 0, tmp = x;
         while (tmp != 0) {
             palindome *= 10;
